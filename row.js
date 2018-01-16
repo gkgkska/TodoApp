@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         textDecorationLine: "line-through"
     },
     text: {
-        fontSize: 24,
+        fontSize: 22,
     }
 })
 export default Row;
