@@ -1,2 +1,0 @@
-# TodoApp
-Todo app
