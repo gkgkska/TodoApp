@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Switch } from 'react-native';
+import { StyleSheet, Text, View, Switch, TouchableOpacity } from 'react-native';
 
 class Row extends Component{
   render() {
@@ -13,6 +13,9 @@ class Row extends Component{
         <View style={styles.textWrap}>
             <Text style={[styles.text, complete && styles.complete]}>{this.props.text}</Text>
         </View>
+        <TouchableOpacity onPress={this.props.onRemove}>
+            <Text style={styles.destroy}>X</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -33,7 +36,12 @@ const styles = StyleSheet.create({
         textDecorationLine: "line-through"
     },
     text: {
-        fontSize: 22,
+        fontSize: 20,
+    },
+    destroy: {
+        flex:1,
+        fontSize: 20,
+        color: "#cc9a9a"
     }
 })
 export default Row;
